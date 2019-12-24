@@ -5,7 +5,7 @@ using namespace std;
 
 int threeSumClosest(vector<int>& nums, int target) {
     if (nums.size() < 3)
-        return {};
+        return accumulate(nums.begin(), nums.end(), 0);
 
     int size = nums.size(), beg, end;
     int closest = nums[0] + nums[1] + nums[2];
